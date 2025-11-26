@@ -16,18 +16,11 @@
         "types": "./dist/index.d.cts",
         "default": "./dist/index.cjs"
       }
-    },
-    "./colors": {
-      "import": {
-        "types": "./dist/colors/index.d.ts",
-        "default": "./dist/colors/index.js"
-      },
-      "require": {
-        "types": "./dist/colors/index.d.cts",
-        "default": "./dist/colors/index.cjs"
-      }
     }
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "rm -rf dist && tsup",
     "lint": "eslint .",
