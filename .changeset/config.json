@@ -6,5 +6,5 @@
   "linked": [],
   "access": "public",
   "updateInternalDependencies": "patch",
-  "ignore": ["docs", "playground"]
+  "ignore": ["docs", "playground", "eslint-config", "typescript-config"]
 }

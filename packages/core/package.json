@@ -20,6 +20,8 @@
   },
   "scripts": {
     "build": "rm -rf dist && tsup",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "dev": "tsup --watch",
     "clean": "rm -rf .turbo node_modules dist"
   },
