@@ -1,6 +1,6 @@
 {
   "name": "@tests-npm-deploy/core",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
   "sideEffects": false,
   "license": "MIT",
@@ -16,6 +16,16 @@
         "types": "./dist/index.d.cts",
         "default": "./dist/index.cjs"
       }
+    },
+    "./colors": {
+      "import": {
+        "types": "./dist/colors/index.d.ts",
+        "default": "./dist/colors/index.js"
+      },
+      "require": {
+        "types": "./dist/colors/index.d.cts",
+        "default": "./dist/colors/index.cjs"
+      }
     }
   },
   "scripts": {
@@ -26,8 +36,8 @@
     "clean": "rm -rf .turbo node_modules dist"
   },
   "devDependencies": {
-    "@repo/eslint-config": "*",
-    "@repo/typescript-config": "*",
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
     "@types/react": "^18.2.61",
     "@types/react-dom": "^18.2.19",
     "eslint": "^9.39.1",
