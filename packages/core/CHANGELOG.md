@@ -1,5 +1,11 @@
 # @tests-npm-deploy/core
 
+## 2.0.0
+
+### Major Changes
+
+- тест деплоя
+
 ## 1.2.0
 
 ### Minor Changes
