@@ -1,0 +1,53 @@
+.tab .tabLabel {
+  color: var(--mantine-color-black-10);
+  font-size: 14px;
+  font-weight: inherit;
+}
+
+.tab[data-orientation='horizontal'] {
+  border-bottom-color: var(--tab-border-color);
+  padding: 12px;
+  font-weight: inherit;
+
+  & span {
+    font-weight: inherit;
+  }
+
+  &[data-active] {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background-color: var(--mantine-color-brand-6);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+  }
+
+  &:not([data-active])::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: var(--mantine-color-brand-6);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+
+  &[data-active]::after {
+    transform: scaleX(1);
+  }
+}
+
+.panel {
+  padding-top: 24px;
+}

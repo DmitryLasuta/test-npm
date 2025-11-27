@@ -1,7 +1,6 @@
-import { createTheme, MantineProvider } from '@mantine/core';
-
-const theme = createTheme({});
+import { uptradeTheme } from '@tests-npm-deploy/core';
+import { MantineProvider } from '@mantine/core';
 
 export function MantineAppProvider({ children }: { children: React.ReactNode }) {
-  return <MantineProvider theme={theme}>{children}</MantineProvider>;
+  return <MantineProvider theme={uptradeTheme}>{children}</MantineProvider>;
 }

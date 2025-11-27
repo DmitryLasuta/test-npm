@@ -1,0 +1,12 @@
+.title {
+  font-weight: 700;
+}
+
+.header {
+  padding: 24px;
+}
+
+.body {
+  padding: 24px;
+  padding-top: 0;
+}

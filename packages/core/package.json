@@ -1,49 +1,49 @@
 {
   "name": "@tests-npm-deploy/core",
-  "version": "0.1.0",
+  "version": "1.2.0",
   "type": "module",
-  "sideEffects": false,
+  "sideEffects": true,
   "license": "MIT",
-  "main": "./dist/index.js",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": {
-        "types": "./dist/index.d.ts",
-        "default": "./dist/index.js"
-      },
-      "require": {
-        "types": "./dist/index.d.cts",
-        "default": "./dist/index.cjs"
-      }
-    }
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./core.css": "./dist/core.css"
   },
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "rm -rf dist && tsup",
+    "build": "vite build",
+    "dev": "vite build --watch",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "dev": "tsup --watch",
-    "clean": "rm -rf .turbo node_modules dist"
+    "clean": "rm -rf node_modules dist .turbo"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
-    "@repo/typescript-config": "workspace:*",
+    "@repo/eslint-config": "*",
+    "@repo/typescript-config": "*",
     "@types/react": "^18.2.61",
     "@types/react-dom": "^18.2.19",
     "eslint": "^9.39.1",
     "tsup": "^8.0.2",
-    "typescript": "5.9.2"
+    "typescript": "^5.9.2",
+    "vite": "^7.2.4",
+    "vite-plugin-dts": "^4.5.4",
+    "@vitejs/plugin-react": "^5.1.1"
   },
   "publishConfig": {
     "access": "public"
   },
   "peerDependencies": {
-    "react": "^18.x || ^19.x",
-    "react-dom": "^18.x || ^19.x",
     "@mantine/core": "7.17.8",
-    "@mantine/hooks": "7.17.8"
+    "@mantine/hooks": "7.17.8",
+    "@mantine/dates": "7.17.8",
+    "react": "^18.x || ^19.x",
+    "react-dom": "^18.x || ^19.x"
   }
 }

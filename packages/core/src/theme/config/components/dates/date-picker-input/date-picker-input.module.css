@@ -1,0 +1,10 @@
+.input {
+  border-radius: var(--input-radius);
+}
+
+.root[data-size='sm'] {
+  .input {
+    padding-block: 3.5px;
+    min-height: 32px;
+  }
+}

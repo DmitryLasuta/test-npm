@@ -1,0 +1,5 @@
+.root {
+  &[data-variant='light'] {
+    background: var(--mantine-color-brand-10);
+  }
+}

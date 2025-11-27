@@ -1,0 +1,5 @@
+.root {
+  font-size: var(--title-fz) !important;
+  font-weight: var(--title-fw) !important;
+  line-height: var(--title-lh) !important;
+}

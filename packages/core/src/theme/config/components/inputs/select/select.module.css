@@ -1,0 +1,28 @@
+.label {
+  font-size: var(--input-label-size);
+  color: var(--input-label-size);
+  margin: 0;
+  padding-inline-start: 0;
+}
+
+.root .input {
+  border-radius: var(--input-radius);
+  font-size: var(--input-fz);
+  &:not(:disabled) {
+    background-color: var(--input-bg);
+  }
+
+  &[data-disabled='true'] {
+    background-color: var(--mantine-color-gray-0);
+  }
+}
+
+.wrapper {
+  &[data-size='sm'] {
+    --input-height: 32px !important;
+  }
+
+  &[data-size='xs'] {
+    --input-fz: 14px !important;
+  }
+}

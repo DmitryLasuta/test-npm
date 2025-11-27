@@ -1,0 +1,15 @@
+.label {
+  margin-bottom: 0;
+}
+
+.root[data-size='sm'] {
+  .label {
+    padding-left: 8px;
+  }
+}
+
+.root .inner .input {
+  &:disabled {
+    background-color: var(--mantine-color-gray-0) !important;
+  }
+}

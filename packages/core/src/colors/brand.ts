@@ -20,7 +20,7 @@ import { type MantineColorsTuple } from '@mantine/core';
  *
  */
 
-export const blueColorsPalette: MantineColorsTuple = [
+export const brandColorsPalette: MantineColorsTuple = [
   '#f8f9ff', // [0]
   '#cfcfff', // [1]
   '#9b9bff', // [2]
@@ -31,4 +31,5 @@ export const blueColorsPalette: MantineColorsTuple = [
   '#0000e4', // [7]
   '#0000cc', // [8]
   '#0000b4', // [9]
+  '#dbe4ff' //  [10]
 ] as const;

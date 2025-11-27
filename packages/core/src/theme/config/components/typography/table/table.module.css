@@ -1,0 +1,111 @@
+.table[data-variant='primary'] {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+/* Header cells */
+.table[data-variant='primary'] > .thead .th {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--mantine-color-black-10);
+  background: var(--mantine-color-gray-1);
+  vertical-align: top;
+}
+
+.table[data-variant='primary'] > .tbody .tr .td {
+  border-top: calc(0.0625rem * var(--mantine-scale)) solid var(--table-border-color);
+  background-color: white;
+  color: var(--mantine-color-uptrade-black-10);
+  vertical-align: top;
+}
+
+.table[data-variant='primary'] > .tbody .td:first-of-type,
+.table[data-variant='primary'] > .thead .th:first-of-type {
+  border-left: calc(0.0625rem * var(--mantine-scale)) solid var(--table-border-color);
+}
+
+.table[data-variant='primary'] > .tbody .td:last-of-type,
+.table[data-variant='primary'] > .thead .th:last-of-type {
+  border-right: calc(0.0625rem * var(--mantine-scale)) solid var(--table-border-color);
+}
+
+.table[data-variant='primary'] > .thead .tr:first-of-type .th {
+  border-top: calc(0.0625rem * var(--mantine-scale)) solid var(--table-border-color);
+}
+
+.table[data-variant='primary'] > .tr:first-of-type .th:first-of-type {
+  border-top-left-radius: 16px;
+}
+
+.table[data-variant='primary'] > .thead .tr:first-of-type .th:last-of-type {
+  border-top-right-radius: 16px;
+}
+
+/* Last row bottom border + radius */
+.table[data-variant='primary'] > .tbody .tr:last-of-type .td {
+  border-bottom: calc(0.0625rem * var(--mantine-scale)) solid var(--table-border-color);
+}
+
+.table[data-variant='primary'] > .tbody .tr:last-of-type .td:first-of-type {
+  border-bottom-left-radius: 16px;
+}
+
+.table[data-variant='primary'] > .tbody .tr:last-of-type .td:last-of-type {
+  border-bottom-right-radius: 16px;
+}
+
+.table[data-variant='primary'] > .thead[data-sticky='true'] .th {
+  border-bottom: none !important;
+}
+
+.table[data-variant='primary'] > .thead[data-sticky='true']::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  height: 1px;
+  background-color: var(--table-border-color);
+}
+
+.table[data-variant='primary'] > .thead[data-sticky='true'] .th:first-of-type {
+  background-color: var(--mantine-color-white-0);
+  border-top-left-radius: 0;
+  border: none;
+  position: relative;
+}
+
+.table[data-variant='primary'] > .thead[data-sticky='true'] .th:first-of-type::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  border-top-left-radius: 16px;
+  background: var(--mantine-color-gray-1, #f1f3f5);
+  border-top: calc(0.0625rem * var(--mantine-scale)) solid var(--table-border-color);
+  border-left: calc(0.0625rem * var(--mantine-scale)) solid var(--table-border-color);
+}
+
+.table[data-variant='primary'] > .thead[data-sticky='true'] .th:last-of-type {
+  background-color: var(--mantine-color-white-0);
+  border-top-right-radius: 0;
+  border: none;
+  position: relative;
+}
+
+.table[data-variant='primary'] > .thead[data-sticky='true'] .th:last-of-type::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  border-top-right-radius: 16px;
+  background: var(--mantine-color-gray-1, #f1f3f5);
+  border-top: calc(0.0625rem * var(--mantine-scale)) solid var(--table-border-color);
+  border-right: calc(0.0625rem * var(--mantine-scale)) solid var(--table-border-color);
+}
